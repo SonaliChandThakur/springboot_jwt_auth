@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Fetch user profile data
-    fetch("http://localhost:8080/auth/profile", {
+    fetch("https://springboot-jwt-auth-8aq0.onrender.com/auth/profile", {
         headers: { "Authorization": "Bearer " + token }
     })
     .then(response => {
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function loadUsers() {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8080/auth/admin/users", {
+    fetch("https://springboot-jwt-auth-8aq0.onrender.com/auth/admin/users", {
         headers: { "Authorization": "Bearer " + token }
     })
     .then(response => {
@@ -98,7 +98,7 @@ function deleteUser(userId) {
         return;
     }
 
-    fetch(`http://localhost:8080/auth/admin/users/${userId}`, {
+    fetch(`https://springboot-jwt-auth-8aq0.onrender.com/auth/admin/users/${userId}`, {
         method: "DELETE",
         headers: { "Authorization": "Bearer " + token }
     })
@@ -121,7 +121,7 @@ function deleteUser(userId) {
 function updateUserRole(userId, newRole) {
     const token = localStorage.getItem("token");
 
-    fetch(`http://localhost:8080/auth/admin/users/${userId}`, {
+    fetch(`https://springboot-jwt-auth-8aq0.onrender.com/auth/admin/users/${userId}`, {
         method: "PUT",
         headers: {
             "Authorization": "Bearer " + token,
