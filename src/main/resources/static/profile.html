@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | JWT Auth System</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Ensure path is correct -->
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>JWT Auth System</h1>
+        <div class="nav-buttons">
+            <a href="index.html" class="btn">Home</a>
+            <button id="logout-btn" class="btn logout">Logout</button>
+        </div>
+    </div>
+
+    <!-- Profile Content -->
+    <div class="profile-container">
+        <h2>Welcome, <span id="username">Loading...</span>!</h2>
+        <p id="role">Role: Loading...</p>
+
+        <!-- Notification Messages -->
+        <div id="notification" class="hidden-message"></div>
+    </div>
+
+    <!-- Admin Panel (Only Visible for Admins) -->
+    <div id="admin-section" class="admin-panel" style="display: none;">
+        <h3>Admin Panel - Manage Users</h3>
+
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="user-list">
+                <tr><td colspan="4">Loading users...</td></tr> <!-- Initial Loading Row -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/profile.js"></script> <!-- Ensure path is correct -->
+</body>
+</html>

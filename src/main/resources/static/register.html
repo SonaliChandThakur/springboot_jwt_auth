@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - SecureApp</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/auth.js"></script>
+</head>
+<body>
+    <div class="landing-container">
+        <nav class="navbar">
+            <h1>SecureApp</h1>
+            <div class="nav-buttons">
+                <a href="index.html" class="btn">Home</a>
+                <a href="login.html" class="btn">Login</a>
+            </div>
+        </nav>
+        <div class="auth-box">
+            <h2>Register</h2>
+            <p id="register-message" class="hidden-message"></p>
+            <form id="register-form">
+                <div class="input-group">
+                    <input type="text" id="register-username" placeholder="Username" required>
+                    <input type="password" id="register-password" placeholder="Password" required>
+                    <select id="register-role">
+                        <option value="USER">User</option>
+                        <option value="ADMIN">Admin</option>
+                    </select>
+                </div>
+                <button type="submit" class="cta-btn-small">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+</body>
+</html>

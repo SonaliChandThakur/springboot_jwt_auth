@@ -1,0 +1,296 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #4A90E2, #145DA0);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Properly Centered Navbar */
+.navbar {
+    width: 100%;
+    max-width: 600px; /* Restrict max width for proper centering */
+    display: flex;
+    justify-content: space-between; /* Keeps text aligned left, buttons right */
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    margin: 25px -20px; /* Center the navbar itself */
+}
+
+/* Navbar Title */
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: left;
+}
+
+/* Navbar Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons .btn {
+    text-decoration: none;
+    background: white;
+    color: #145DA0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-buttons .btn:hover {
+    background: #357ABD;
+    color: white;
+}
+
+/* Hero Section (Index Page) */
+.hero {
+    text-align: center;
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h2 span {
+    color: yellow;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    text-decoration: none;
+    background: yellow;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Authentication Pages (Login, Register, Profile) */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Glass Effect Form Box */
+.auth-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+/* Headings */
+.auth-box h2 {
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group input,
+.input-group select {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+}
+
+/* Placeholder Color */
+.input-group input::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+/* Buttons */
+.auth-box button,
+.cta-btn-small {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: yellow;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.auth-box button:hover,
+.cta-btn-small:hover {
+    background: white;
+    color: black;
+}
+
+/* ---------------- */
+/* PROFILE PAGE STYLES */
+/* ---------------- */
+
+/* Profile Container */
+.profile-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Admin Panel */
+#admin-section {
+    display: none;
+    margin-top: 30px;
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Table Styling */
+#admin-section h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+td {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #f1c40f;
+    color: black;
+}
+
+.edit-btn:hover {
+    background: #d4ac0d;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* Success & Error Messages */
+.hidden-message {
+    display: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.success {
+    background: rgba(0, 255, 0, 0.3);
+    color: lime;
+}
+
+.error {
+    background: rgba(255, 0, 0, 0.3);
+    color: red;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .auth-box {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .profile-container {
+        width: 90%;
+    }
+
+    #admin-section {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
