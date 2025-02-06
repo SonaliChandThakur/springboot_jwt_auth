@@ -1,4 +1,3 @@
-# springboot_jwt_auth
 # **JWT Authentication System with Role-Based Access Control**
 
 This project is a **Spring Boot JWT Authentication System** with **role-based access control (RBAC)**. It provides secure login, registration, and profile management. Admin users have additional privileges to **view, update, and delete users**. The frontend is designed with **HTML, CSS (Glassmorphism UI), and JavaScript**, while backend security is enforced using **JWT tokens**.
