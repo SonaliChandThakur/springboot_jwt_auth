@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("login-form");
     const registerForm = document.getElementById("register-form");
 
+    //  Update with your actual Render backend URL
+    const API_BASE_URL = "https://springboot-jwt-auth-8aq0.onrender.com/auth"; 
+
     function showMessage(element, message, isSuccess) {
         element.textContent = message;
         element.className = isSuccess ? "message success" : "message error";
@@ -9,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => element.style.display = "none", 3000);
     }
 
+    //  Login Form Submission
     if (loginForm) {
         loginForm.addEventListener("submit", async function (event) {
             event.preventDefault();
@@ -17,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const messageBox = document.getElementById("login-message");
 
             try {
-                const response = await fetch("http://localhost:8080/auth/login", {
+                const response = await fetch(`${API_BASE_URL}/login`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ username, password })
@@ -30,14 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     localStorage.setItem("username", username);
                     window.location.href = "profile.html";
                 } else {
-                    showMessage(messageBox, "Invalid credentials!", false);
+                    showMessage(messageBox, data.message || "Invalid credentials!", false);
                 }
             } catch (error) {
-                showMessage(messageBox, "Login error!", false);
+                showMessage(messageBox, "Login error! Check your internet connection.", false);
             }
         });
     }
 
+    //  Registration Form Submission
     if (registerForm) {
         registerForm.addEventListener("submit", async function (event) {
             event.preventDefault();
@@ -47,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const messageBox = document.getElementById("register-message");
 
             try {
-                const response = await fetch("http://localhost:8080/auth/register", {
+                const response = await fetch(`${API_BASE_URL}/register`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ username, password, role })
@@ -59,10 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     showMessage(messageBox, "Registration successful! Redirecting...", true);
                     setTimeout(() => window.location.href = "login.html", 2000);
                 } else {
-                    showMessage(messageBox, text, false);
+                    showMessage(messageBox, text || "Registration failed!", false);
                 }
             } catch (error) {
-                showMessage(messageBox, "Registration error!", false);
+                showMessage(messageBox, "Registration error! Check your internet connection.", false);
             }
         });
     }
