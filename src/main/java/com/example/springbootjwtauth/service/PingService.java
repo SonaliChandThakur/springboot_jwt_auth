@@ -9,9 +9,9 @@ import java.net.URL;
 @Service
 public class PingService {
 
-    private static final String TARGET_URL = "https://google.com"; // Replace with your target website
+    private static final String TARGET_URL = "https://springboot-jwt-auth-8aq0.onrender.com"; 
 
-    @Scheduled(fixedRate = 600000) // 600000 ms = 10 minutes
+    @Scheduled(fixedRate = 600000) 
     public void pingWebsite() {
         try {
             URL url = new URL(TARGET_URL);
